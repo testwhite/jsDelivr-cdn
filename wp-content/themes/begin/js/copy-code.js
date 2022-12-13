@@ -20,7 +20,9 @@ jQuery(document).ready(function() {
 	function(event) {
 		event.clearSelection();
 		event.trigger.innerHTML = copied_text_label;
+		jQuery('.codebox').addClass('pre-loading');
 		window.setTimeout(function() {
+		jQuery('.codebox').removeClass('pre-loading');
 			event.trigger.innerHTML = copy_text_label;
 		},
 		2000);
